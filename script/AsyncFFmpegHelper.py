@@ -2,7 +2,6 @@
 Project: AsyncFFmpegHelper
 Author: hyugogirubato
 Script: AsyncFFmpegHelper.py
-Version: v2022.02.19
 """
 
 import asyncio
@@ -89,11 +88,8 @@ def _async_download(config, files):
                     if _log:
                         utils.log(f'[{_protocol} @ {_id}]', f'Opening `{_url}` for reading')
 
-                    sys.stdout.write('count={0:<4} index={1:<4} progress={2:<6}\r'.format(
-                        _count,
-                        _index,
-                        f'{round(_index / _count * 100)}%'
-                    ))
+                    progress = f'{str(round(_index / _count * 100))}%'
+                    sys.stdout.write(f'count={_count:<4} index={_index:<4} progress={progress:<6}\r')
                     sys.stdout.flush()
                     async with session.get(_url) as r:
                         if r.ok:
@@ -349,6 +345,7 @@ class FFmpegHelper:
     def extract(self):
         content = _get_master_content(self._config)
         streams = _get_master_streams(content)
+        print('INFO: List of available video resolutions.')
         print('{0:<6} {1:<14} {2:<10}'.format('ID', 'Resolution', 'Bandwidth'))
         for stream in streams:
             print('{0:<6} {1:<14} {2:<10}'.format(stream['id'], stream['resolution'], stream['bandwidth']))

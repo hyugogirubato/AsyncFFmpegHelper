@@ -2,8 +2,8 @@
 Project: AsyncFFmpegHelper
 Author: hyugogirubato
 Script: utils.py
-Version: v2022.02.19
 """
+
 import sys
 
 from termcolor import colored, cprint
@@ -26,4 +26,3 @@ def log(_type, message):
 
 def warning(message):
     cprint(f'WARNING: {message}', 'yellow')
-
