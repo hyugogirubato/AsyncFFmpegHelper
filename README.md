@@ -1,7 +1,7 @@
 <p align="center">
   <img src="/resource/favicon.png?raw=true" width="20%"></img>
-  [![Version](https://img.shields.io/badge/Version-v2022.02.20-green.svg)](https://github.com/hyugogirubato/AsyncFFmpegHelper/releases)
 </p>
+[![Version](https://img.shields.io/badge/Version-v2022.02.20-green.svg)](https://github.com/hyugogirubato/AsyncFFmpegHelper/releases)
 
 
 ## Description
