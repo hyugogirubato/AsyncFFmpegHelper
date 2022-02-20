@@ -88,7 +88,7 @@ def _async_download(config, files):
                     if _log:
                         utils.log(f'[{_protocol} @ {_id}]', f'Opening `{_url}` for reading')
 
-                    sys.stdout.write(f'count={_count:<4} index={_index:<4} progress={_index / _count:.0%}\r')
+                    sys.stdout.write(f'count={_count:<4} index={_index:<4} progress={_index / _count:<6.0%}\r')
                     sys.stdout.flush()
                     async with session.get(_url) as r:
                         if r.ok:
