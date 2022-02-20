@@ -33,9 +33,11 @@ def get_config(args):
         else:
             config['skip'] = args.skip
             config['log'] = args.log
-            config['tasks'] = args.tasks
             config['id'] = args.id
             config['url'] = args.url
+            config['tasks'] = args.tasks
+            if config['tasks'] <= 0:
+                utils.error('Tasks count cannot be less than 1.')
 
         if args.extract:
             pass
@@ -75,8 +77,7 @@ def main():
     parser.add_argument('-f', '--ffmpeg', type=str, help='FFmpeg arguments.')
     parser.add_argument('-o', '--output', type=str, help='Output file path.')
     parser.add_argument('-l', '--log', action='store_true', default=False, help='Show process details.')
-    parser.add_argument('-s', '--skip', action='store_true', default=False,
-                        help='Do not download if the video already exists.')
+    parser.add_argument('-s', '--skip', action='store_true', default=False, help='Do not download if the video already exists.')
     parser.add_argument('-c', '--clear', action='store_true', default=False, help='Clean up all temporary files.')
     args = parser.parse_args()
     config = get_config(args)
