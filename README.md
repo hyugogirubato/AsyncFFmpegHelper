@@ -1,4 +1,4 @@
-# AsyncFFmpegHelper [![Version](https://img.shields.io/badge/Version-v2022.02.20-green.svg)](https://github.com/hyugogirubato/AsyncFFmpegHelper/releases)
+# AsyncFFmpegHelper [![Release](https://img.shields.io/badge/Version-v2022.02.20-green.svg)](https://github.com/hyugogirubato/AsyncFFmpegHelper/releases)
 
 <img src="/resource/favicon.png?raw=true" width="20%"></img>
 
