@@ -1,4 +1,4 @@
-![AsyncFFmpegHelper](/resource/favicon.png?raw=true)  
+![AsyncFFmpegHelper](/resource/favicon.png?raw=true = 250x)  
 [![Version](https://img.shields.io/badge/Version-v2022.02.20-green.svg)](https://github.com/hyugogirubato/AsyncFFmpegHelper/releases)
 
 ## Description
